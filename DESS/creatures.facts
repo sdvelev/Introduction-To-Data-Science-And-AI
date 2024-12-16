@@ -1,0 +1,106 @@
+%-----------------------------------------------------------------------------
+% Rules
+%-----------------------------------------------------------------------------
+
+rule mammal_1
+	if	'body covering is hair'
+	then	'creature is a mammal';
+
+rule mammal_2
+	if	'feeds young on milk'
+	then	'creature is a mammal';
+
+rule bird_1
+	if	'body covering is feathers'
+	then	'creature is a  bird';
+
+rule bird_2
+	if	'motion is flies' and
+		'reproduction is eggs'
+	then	'creature is a bird';
+
+rule feeding_type_1
+	if	'creature is a mammal' and
+		'food is meat'
+	then	'feeding type is carnivore';
+
+rule feeding_type_2
+	if	'creature is a mammal' and
+		'teeth are pointed' and
+		'feet are claws' and
+		'eyes point forward'
+	then	'feeding type is carnivore';
+
+rule feeding_type_3
+	if	'creature is a mammal' and
+		'food is grass'
+	then	'feeding type is ungulate';
+
+rule feeding_type_4
+	if	'creature is a mammal' and
+		'feet are hoofs'
+	then	'feeding type is ungulate';
+
+rule species_1
+	if	'feeding type is carnivore' and
+		'colour is tawny' and
+		'marking is dark spots'
+	then	'species is cheetah';
+
+rule species_2
+	if	'feeding type is carnivore' and
+		'colour is tawny' and
+		'marking is black stripes'
+	then	'species is tiger';
+
+rule species_3
+	if	'feeding type is ungulate' and
+		'colour is tawny' and
+		'marking is dark spots' and
+		'legs and neck are long'
+	then	'species is giraffe';
+
+rule species_4
+	if	'feeding type is ungulate' and
+		'colour is black and white'
+	then	'species is zebra';
+
+rule species_5
+	if	'creature is a bird' and
+		'motion is walks' and
+		'colour is black and white' and
+		'legs and neck are long'
+	then	'species is ostrich';
+
+rule species_6
+	if	'creature is a bird' and
+		'motion is swims' and
+		'colour is black and white'
+	then	'species is penguin';
+
+rule species_7
+	if	'creature is a bird' and
+		'motion is flies'
+	then	'species is albatross';
+
+
+%-----------------------------------------------------------------------------
+% Facts
+%-----------------------------------------------------------------------------
+
+'body covering is hair';		% GIRAFFE
+'food is grass';			% GIRAFFE
+'legs and neck are long';		% GIRAFFE
+'colour is tawny';			% GIRAFFE
+'marking is dark spots';		% GIRAFFE
+
+%'teeth are pointed';			% CHEETAH
+%'feet are claws';			% CHEETAH
+%'eyes point forward';			% CHEETAH
+%'body covering is hair';		% CHEETAH
+%'colour is tawny';			% CHEETAH
+%'marking is dark spots';		% CHEETAH
+
+%'body covering is hair';		% ZEBRA
+%'food is grass';			% ZEBRA
+%'colour is black and white';		% ZEBRA
